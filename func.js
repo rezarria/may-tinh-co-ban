@@ -32,8 +32,17 @@ const xuat = () => {
 
 const tinh = () => {
   ketQua = eval(HangDoi).toString();
-  if (ketQua == "Infinity")
-    ketQua = "Vô lý!"
+  if (ketQua == "Infinity") ketQua = "Vô lý!";
   xoaSach();
   capNhat(false);
+};
+
+var rgb = false;
+
+const kiemTra = () => {
+  rgb = !rgb;
+  if (rgb)
+    document.getElementById("noi-dung-hien-thi").classList.add("rainbow-text");
+  else
+    document.getElementById("noi-dung-hien-thi").classList.remove("rainbow-text");
 };
