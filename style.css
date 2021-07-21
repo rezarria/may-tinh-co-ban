@@ -55,6 +55,7 @@ body {
   width: auto;
   height: 400px;
   cursor: pointer;
+  font-family: "DotGothic16", sans-serif;
 }
 
 .phim {
@@ -104,11 +105,11 @@ body {
 }
 
 .chuc-nang > .phim {
+  font-size: 30px;
   margin-top: 2px;
   margin-bottom: 2px;
   width: 100%;
   border-style: solid;
-  padding-top: 15px;
 }
 
 #tg {
