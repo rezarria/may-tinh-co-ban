@@ -1,25 +1,39 @@
-var HangDoi = String();
-var ketQua = 0;
-function xoaSach() {
-  HangDoi = String();
-}
+var HangDoi = "0";
+var ketQua = "0";
 
-function themVao(phim) {
-  console.log("themVao() =>");
+const capNhat = (mode) => {
+  document.getElementById("noi-dung-hien-thi").innerText = (
+    mode ? HangDoi : ketQua
+  )
+    .toString()
+    .substr(0, 17);
+};
+
+const xoaSach = () => {
+  HangDoi = String();
+  HangDoi = "0";
+  capNhat(true);
+};
+
+const themVao = (phim) => {
   if (isNaN(phim)) {
-    console.log("xxxxxxxx");
     if (!isNaN(HangDoi[HangDoi.length - 1])) HangDoi += phim;
   } else {
-    console.log("!!!!!!!!");
     HangDoi += phim;
+    if (!(HangDoi[0] == "0" && isNaN(HangDoi[1])))
+      while (HangDoi[0] == 0) HangDoi = HangDoi.slice(1);
   }
-  console.log(HangDoi.toString());
-}
+  capNhat(true);
+};
 
-function xuat() {
+const xuat = () => {
   return HangDoi.toString();
-}
+};
 
-function tinh() {
-  alert(ketQua.toString());
-}
+const tinh = () => {
+  ketQua = eval(HangDoi).toString();
+  if (ketQua == "Infinity")
+    ketQua = "Vô lý!"
+  xoaSach();
+  capNhat(false);
+};
