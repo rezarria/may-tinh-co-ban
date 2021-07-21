@@ -25,6 +25,7 @@ body {
   width: 600px;
   background-color: #0075dabd;
   padding: 25px;
+  box-shadow: 5px 10px 0px #3196eed2;
 }
 
 .man-hinh {
